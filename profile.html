@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+     <style>body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+#live-stream {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-container {
+    width: 80%;
+    height: 400px;
+    background-color: #000;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-placeholder {
+    color: white;
+    font-size: 24px;
+}
+
+#chat {
+    width: 80%;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+#chat-messages {
+    height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+#chat-input {
+    width: calc(100% - 60px);
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#send-btn {
+    padding: 10px;
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>Demo</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browse.html">Browse</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Profile</h2>
+            <div class="profile-info">
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Email:</strong> john.doe@example.com</p>
+                <!-- Add more profile information as needed -->
+            </div>
+        </section>
+    </main>
+</body>
+</html>
