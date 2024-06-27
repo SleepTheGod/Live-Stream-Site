@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <style>body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+#live-stream {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.video-container {
+    width: 80%;
+    height: 400px;
+    background-color: #000;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-placeholder {
+    color: white;
+    font-size: 24px;
+}
+
+#chat {
+    width: 80%;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+#chat-messages {
+    height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+#chat-input {
+    width: calc(100% - 60px);
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#send-btn {
+    padding: 10px;
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>Demo</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Browse</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="live-stream">
+            <h2>Live Stream</h2>
+            <div class="video-container">
+                <div class="video-placeholder">Live Stream Video</div>
+            </div>
+            <div id="chat">
+                <h3>Chat</h3>
+                <div id="chat-messages"></div>
+                <input type="text" id="chat-input" placeholder="Type a message...">
+                <button id="send-btn">Send</button>
+            </div>
+        </section>
+    </main>
+
+    <script>document.getElementById('send-btn').addEventListener('click', function() {
+    const chatInput = document.getElementById('chat-input');
+    const chatMessages = document.getElementById('chat-messages');
+    
+    if (chatInput.value.trim() !== "") {
+        const newMessage = document.createElement('div');
+        newMessage.textContent = chatInput.value;
+        chatMessages.appendChild(newMessage);
+        chatInput.value = "";
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+});
+</script>
+</body>
+</html>
